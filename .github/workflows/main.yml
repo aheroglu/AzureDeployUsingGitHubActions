@@ -25,7 +25,7 @@ jobs:
       run: dotnet build ./Todos.WebAPI.sln --configuration Release
   
     - name: Publish
-      run: dotnet publish ./Todos.WebAPI.csproj --configuration Release --no-build --output '${{ secrets.AZURE_PUBLISH_PROFILE }}'
+      run: dotnet publish ./Todos.WebAPI.csproj --configuration Release --no-build --output './publish'
 
     - name: Deployment
       uses: azure/webapps-deploy@v2
